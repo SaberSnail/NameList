@@ -172,10 +172,17 @@ namespace NameList
 			SaveList();
 		}
 
-		public void ResetSelected()
+		public void SetSelectedNotInUse()
 		{
 			foreach (var name in m_selectedNames)
 				name.IsUsed = false;
+			SaveList();
+		}
+
+		public void SetSelectedInUse()
+		{
+			foreach (var name in m_selectedNames)
+				name.IsUsed = true;
 			SaveList();
 		}
 

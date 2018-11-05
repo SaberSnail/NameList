@@ -114,8 +114,13 @@
 								/>
 							<Button
 								Margin="{StaticResource DefaultMarginRight}"
-								Content="Reset"
-								Command="{Binding Converter={x:Static utility:MethodToCommandConverter.Instance}, ConverterParameter=ResetSelected}"
+								Content="Mark"
+								Command="{Binding Converter={x:Static utility:MethodToCommandConverter.Instance}, ConverterParameter=SetSelectedInUse}"
+								/>
+							<Button
+								Margin="{StaticResource DefaultMarginRight}"
+								Content="Clear"
+								Command="{Binding Converter={x:Static utility:MethodToCommandConverter.Instance}, ConverterParameter=SetSelectedNotInUse}"
 								/>
 						</WrapPanel>
 						<ListBox
